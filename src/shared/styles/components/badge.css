@@ -1,0 +1,10 @@
+.badge,
+.tag {
+  @apply inline-flex items-center justify-center rounded px-2
+     py-1.5 align-baseline font-inter text-xs font-medium leading-none
+     tracking-wide transition-all duration-200;
+}
+
+.tag {
+  @apply cursor-pointer;
+}

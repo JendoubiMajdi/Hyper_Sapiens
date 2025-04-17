@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Hello World !</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const root_element = document.getElementById("root");
+      const react_root = ReactDOM.createRoot(root_element);
+      const world = "World";
+      react_root.render(
+        <div>
+          hello {world}
+          {" !"}
+        </div>
+      );
+
+      //ou alors
+      //const jsx = <div>Hello World 2 !</div>;
+      //ReactDOM.createRoot(document.getElementById('root')).render(jsx);
+
+      //Deprecated - Don't do this
+      //const root = document.getElementById('root');
+      //const jsx = <div>Hello World 3 !</div>;
+      //ReactDOM.render(jsx,root);
+
+      //Deprecated - Don't do this
+      // ReactDOM.render(<div>Hello World 4 !</div>,document.getElementById('root'));
+    </script>
+  </body>
+</html>

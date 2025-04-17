@@ -1,0 +1,13 @@
+@import "./../../src/shared/styles/app.scss";
+.my-link {
+  @apply text-green-500;
+  &:hover {
+    @apply text-red-600;
+  }
+}
+
+.my-div {
+  span {
+    @apply text-orange-600;
+  }
+}

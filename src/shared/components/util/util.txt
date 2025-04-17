@@ -1,0 +1,76 @@
+Shared Util Components
+
+##################################################
+# If (component) :
+# The If component is an esay way to perform 
+# conditional rendering. 
+##################################################
+
+function TestReactComponent() {
+  const [fullText, setFullText] = useState(false);
+  const toggle=() => {
+    setFullText(!fullText);
+  }
+  return (
+    <>
+      Conditional rendering is very useful for 
+      <If cond={!fullText}> 
+        ...
+        <br/>
+        <button onClick={toggle}>
+          read more
+        </button>
+      </If>
+      <If cond={fullText}>
+        {" "}displaying more text
+        <br/>
+        <button onClick={toggle}>
+          less
+        </button>
+      </If>
+    </>
+  )
+}
+
+function TestReactComponent() {
+  const [cond, setCond] = useState(true);
+  const toggle = () => {
+    setCond(!cond);
+  }
+  return (
+    <>
+        <span>cond =
+        <If cond={cond}>
+          <b style={{color:"green"}}>
+            {" "+String(cond)}
+          </b>
+        </If>
+        <If cond={!cond}>
+          <b style={{color:"red"}}> 
+          {" "+String(cond)}
+          </b>
+        </If>
+        </span>
+        <br/>
+        <button onClick={toggle}>set to {String(!cond)}</button>
+    </>
+  )
+}
+
+##################################################
+# Repeat (component) :
+# The Repeat component is a surthcut to repeat 
+# children components in a simple loop
+##################################################
+
+function TestReactComponent() {
+  return (
+    <Repeat loops={5}>
+      This is so cool !
+      <br/>
+    </Repeat>
+  )
+}
+
+
+

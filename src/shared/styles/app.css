@@ -1,0 +1,11 @@
+@import "/node_modules/tailwindcss/base";
+@import "./base.css";
+
+@import "/node_modules/tailwindcss/components";
+@import "./components.css";
+
+@import "/node_modules/tailwindcss/utilities";
+
+@import "./pages.css";
+@import "/node_modules/highlight.js/styles/atom-one-dark.css"; /* Just for demo purpose only for highlighting code */
+@import "./fontawesome-all.css";
